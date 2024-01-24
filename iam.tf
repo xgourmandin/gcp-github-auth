@@ -3,7 +3,7 @@ resource "google_service_account" "default" {
 }
 
 resource "google_service_account_iam_binding" "default" {
-  members            = ["principalSet://iam.googleapis.com/${google_iam_workload_identity_pool.default.id}/attribute.repository/${var.github_repository}"]
+  members            = ["principalSet://iam.googleapis.com/${google_iam_workload_identity_pool.default.name}/attribute.repository/${var.github_repository}"]
   role               = "roles/iam.workloadIdentityUser"
   service_account_id = google_service_account.default.name
 }

@@ -10,4 +10,5 @@ locals {
     "attribute.repository" = "assertion.repository"
   }
 
+  enabled_services = concat(["iamcredentials.googleapis.com"], var.extra_enabled_services)
 }

@@ -9,6 +9,10 @@ variable "gcp_region" {
   default     = "europe-west1"
 }
 
+variable "extra_enabled_services" {
+  default = ["iamcredentials.googleapis.com"]
+}
+
 variable "prefix" {
   type        = string
   description = "Optional. A prefix for the names of all resources created by this module"
