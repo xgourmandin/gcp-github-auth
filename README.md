@@ -1,6 +1,9 @@
 # gcp-github-auth
 
-a Terraform project to connect a Github account with GCP Workload Identity
+a Terraform project to connect a Github account with GCP Workload Identity.\
+This repository is not meant to be a Terraform module, but a starter project to connect your Github account with your GCP project.
+
+Feel free to use it as a starting point. If you're making improvements on this, please consider making a pull request.
 
 ## Prerequisites
 
@@ -12,10 +15,10 @@ a Terraform project to connect a Github account with GCP Workload Identity
 
 ### Apply the Terraform project
 
-Make a copy of the `terraform.tfvars.example` file and name it `terraform.tfvars`. Fill in the required variables.
+Make a copy of the `terraform.example.tfvars` file and name it `terraform.tfvars`. Fill in the required variables.
 
 ```bash
-cp terraform.tfvars.example terraform.tfvars
+cp terraform.example.tfvars terraform.tfvars
 ```
 
 By default, the Terraform state is stored locally. You can change this by modifying the `provider.tf` file and setting the `backend` block. [Terraform backend Docs](https://www.terraform.io/docs/language/settings/backends/index.html) 
