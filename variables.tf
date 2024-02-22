@@ -19,9 +19,14 @@ variable "prefix" {
   default     = null
 }
 
-variable "github_repository" {
+variable "github_owner" {
   type        = string
-  description = "The github repository to connect to GCP"
+  description = "The github owner to connect to GCP"
+}
+
+variable "github_repositories" {
+  type        = list(string)
+  description = "The github repositories to connect to GCP"
 }
 
 variable "github_token" {
